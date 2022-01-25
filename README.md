@@ -1,2 +1,2 @@
 # Basic-Js-Practice
-vanilla javascript beginner level code
+Vanilla Javascript beginner level code
