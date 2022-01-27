@@ -5,7 +5,7 @@ let cdesc = document.querySelector('.desc');
 let ctemp = document.querySelector('.temp');
 let main = document.querySelector('main');
 
-bgImgs = ["sun","mist","clouds","snow","rain"]
+bgImgs = ["sun","mist","clouds","snow","rain","smoke"]
 
 
 button.addEventListener('click',function(){
@@ -29,8 +29,10 @@ button.addEventListener('click',function(){
             main.style.backgroundImage = `url(${bgImgs[2]}.jpg)`;
         } else if(desc == 'Snow'){
             main.style.backgroundImage = `url(${bgImgs[3]}.jpg)`;
-        } else if(desc == 'Rain'){
+        } else if(desc == 'Rain'|| desc == 'Haze'){
             main.style.backgroundImage = `url(${bgImgs[4]}.jpg)`;
+        } else if(desc == 'Smoke' || desc == 'Smog' ){
+            main.style.backgroundImage = `url(${bgImgs[5]}.jpg)`;
         } 
 
     })
