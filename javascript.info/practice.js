@@ -185,3 +185,61 @@
 //     () => alert("You agreed."),
 //     () => alert("You canceled the execution.")
 //   );
+
+// IEC
+
+// objects
+//let,const vs var
+// let x = 1;
+// console.log(x);
+
+// {
+//     let apple = "apple";
+//     console.log(x,apple);
+// }
+
+// console.log(apple);
+
+//for const arrays and objects - can't redeclare them entirely - can add or change properties/values etc
+
+// maps - data structure used to hold key value pairs
+// sets - like arrays, can't have repeated values
+//destructuring - easier way to access object properties
+
+// let employee = {
+//     name : "Areeb",
+//     age : 20,
+//     job : "Developer"
+// };
+
+// let {name, age} = employee;
+// console.log(name,age);
+
+// let company = {
+
+//     name : "A4tech",
+//     social : {
+//         facebook : "https://www.facebook.com/A4tech",
+//         twitter : "https://www.twitter.com/A4tech"
+//     }
+
+// };
+
+// let { facebook, twitter } = company.social;
+
+// console.log(facebook,twitter);
+
+//es6 classes can be inherited etc - also has setters,getters, constructors etc
+
+//promises - deals with the problem of asyncronousity  - syntax and application???
+
+// console.log(1);
+// setTimeout(function(){
+//     console.log(2);
+// },3000);
+
+// console.log(3);
+// setTimeout(function(){
+//     console.log(4);
+// },1000);
+
