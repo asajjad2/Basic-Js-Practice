@@ -4,16 +4,47 @@
     box-sizing: border-box;
 }
 
-#main{
-
-    height: 100vh;
+body{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    background-color: #5899E2;
 }
 
+#main{
 
+    width: 15em;
+
+    height: 30em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #134074;
+    border-radius: 20px;
+}
+
+#screen{
+    height: 23%;
+    width: 90%;
+    
+    background-color: #F2F2F2;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#eq{
+    margin: 15px;
+    font-size: 1em;
+}
+
+#ans{
+    margin: 30px 15px 15px 15px;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-align: right;
+}
 
 .buttons{
     display: flex;

@@ -12,9 +12,11 @@ mainExpression = "",
 op1counter = 0;
 
 let operandEncountered = false;
+let StackArr = [1,2,3]; // would contain the two operands and operator
 
 btns = document.querySelectorAll('button');
-output = document.querySelector(".output");
+output = document.querySelector("#eq");
+result = document.querySelector("#ans");
 
 btns.forEach(function(btn){
 
@@ -30,6 +32,8 @@ btns.forEach(function(btn){
 
 function manageInput(inp){
 
+    result.innerHTML = "";
+
     let isNum = false;
 
     if(isNaN(Number(inp)) == false){
@@ -40,63 +44,35 @@ function manageInput(inp){
 
     
 
-    if(isNum){
-
-        if(operandEncountered){//not 1st
-            
-            if(!isNaN(mainExpression[mainExpression.length-1]) || mainExpression[mainExpression.length-1] === ")"){
-                
-            }
-            
-        } else {//1st number
+    if(isNum){      
 
             inp = Number(inp);
             appendNumber(inp);
             updateDisplay();
 
-        }
-
     } else{ //operator
 
         if(inp !== "="){ //other than =
 
+                
 
-            if(!isNaN(mainExpression[mainExpression.length-1]) || mainExpression[mainExpression.length-1] === ")"){//last char is num
-
-                inp = conversions(inp);
-                operator = inp;
-                mainExpression += op1.toString() + operator;
-               
-
-            } else{
-
-                inp = conversions(inp);
-                operator = inp;
-                mainExpression += op1.toString() + operator;
-                output.innerHTML = mainExpression;
                 op1 = 0;
-
-            }
+                op1counter = 0;
+                appendOperator(inp);
+                updateDisplay();
             
-            
-            
-          
-
         } else{
 
-            if(!isNaN(mainExpression[mainExpression.length-1]) || mainExpression[mainExpression.length-1] === ")"){
-
-                output.innerHTML = mainExpression;
-
-            } else{
-
-                mainExpression += op1;
-                output.innerHTML = mainExpression;
-                console.log(eval(mainExpression));
-                
+            mainExpression = compute();
+            if(typeof(mainExpression) == "undefined")
+                output.innerHTML = "Syntax Error";
+            else{
+                result.innerHTML = mainExpression;
             }
 
             
+            op1 = 0;
+            op1counter = 0;
 
         }
 
@@ -117,13 +93,11 @@ function conversions(inp){
     else if(inp === "√") 
         inp = "**(1/2)";
     else if(inp === "DEL"){
-        mainExpression = mainExpression.slice(0,-1);
+        deleteFun();
         inp = "";
-        op1 = "";
     } else if(inp == "C" || inp == "CE"){
-        mainExpression = "";
+        clear();
         inp = "";
-        op1 = "";
     }
         
 
@@ -136,7 +110,13 @@ function clear(){
 }
 
 function deleteFun(){   
+    // console.log("avds");
     mainExpression = mainExpression.slice(0,-1);
+}
+
+function appendOperator(op){
+    op = conversions(op);
+    mainExpression += op;
 }
 
 function appendNumber(num){
@@ -155,6 +135,7 @@ function appendNumber(num){
 }
 
 function compute(){
+    console.log(eval(mainExpression));
     return eval(mainExpression);
 }
 
