@@ -94,7 +94,7 @@ h4 {
   letter-spacing: var(--spacing);
   text-transform: capitalize;
   line-height: 1.25;
-  margin-bottom: 0.75rem;
+  margin-bottom: 2rem;
   font-family: var(--ff-primary);
 }
 h1 {
@@ -231,7 +231,7 @@ Questions
   margin-bottom: 0;
 }
 /* hide text */
-/* .question-text {
+.question-text {
   display: none;
 }
 .show-text .question-text {
@@ -245,4 +245,4 @@ Questions
 }
 .show-text .plus-icon {
   display: none;
-} */
+}
