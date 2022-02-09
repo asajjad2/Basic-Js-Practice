@@ -21,18 +21,21 @@ button.addEventListener('click',function(){
         cdesc.innerHTML = desc;
         ctemp.innerHTML = data['main']['temp'] + "&#176C";
 
+        let randomVal = randomNumGenerator(2);
+        // console.log(randomVal);
+
         if(desc == 'Clear'){
-            main.style.backgroundImage = `url(${bgImgs[0]}.jpg)`;
+            main.style.backgroundImage = `url(assets/${bgImgs[0]}${randomVal}.jpg)`;
         } else if(desc == 'Mist'){
-            main.style.backgroundImage = `url(${bgImgs[1]}.jpg)`;
+            main.style.backgroundImage = `url(assets/${bgImgs[1]}${randomVal}.jpg)`;
         } else if(desc == 'Clouds'){
-            main.style.backgroundImage = `url(${bgImgs[2]}.jpg)`;
+            main.style.backgroundImage = `url(assets/${bgImgs[2]}${randomVal}.jpg)`;
         } else if(desc == 'Snow'){
-            main.style.backgroundImage = `url(${bgImgs[3]}.jpg)`;
+            main.style.backgroundImage = `url(assets/${bgImgs[3]}${randomVal}.jpg)`;
         } else if(desc == 'Rain'|| desc == 'Haze'){
-            main.style.backgroundImage = `url(${bgImgs[4]}.jpg)`;
+            main.style.backgroundImage = `url(assets/${bgImgs[4]}${randomVal}.jpg)`;
         } else if(desc == 'Smoke' || desc == 'Smog' ){
-            main.style.backgroundImage = `url(${bgImgs[5]}.jpg)`;
+            main.style.backgroundImage = `url(assets/${bgImgs[5]}${randomVal}.jpg)`;
         } 
 
     })
@@ -43,4 +46,13 @@ button.addEventListener('click',function(){
 
 
 
+inputVal.addEventListener("keyup",function(event){
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        button.click();
+    }
+})
 
+function randomNumGenerator(size){
+    return Math.floor(Math.random()*size);
+}

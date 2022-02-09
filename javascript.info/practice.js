@@ -243,3 +243,41 @@
 //     console.log(4);
 // },1000);
 
+//DOM stufff https://developer.mozilla.org/en-US/docs/Web/API/Document
+
+document.write("Hello world from js");
+let x = "dshabflkjadsfajdsn;las";
+let h2 = document.getElementById("h2tag");
+h2.innerHTML = x;
+
+//console log options - https://developer.mozilla.org/en-US/docs/Web/API/Console/log
+
+let text = h2.textContent;
+console.log(text);
+console.info(text);
+console.warn(text);
+console.error(text);
+console.log("%c hello",'color:green; font-weight:bold; background-color:red;')
+
+document.body.innerHTML = "new page!";
+
+console.dir(document.body);
+
+
+//4.1 - objects
+
+let user = new Object(); // "object constructor" syntax
+let user = {};  // "object literal" syntax
+
+let user = {     // an object
+    name: "John",  // by key "name" store value "John"
+    age: 30        // by key "age" store value 30
+  };
+
+delete user.age;
+
+// multiword properties
+
+// "likes birds": true
+
+// user["likes birds"] = true;
