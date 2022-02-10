@@ -18,13 +18,20 @@ main{
 
 .search{
     height: 50px;
+    width: 70%;
+    max-width: 500px;
     display: flex;
+    justify-content: space-evenly;
    
 }
 
+
+
+
 button{
     padding: 10px;
-    width: 50px;
+    width: 100%;
+    max-width: 50px;
     font-size: 1.05em;
     height: 50px;
     background-color: #FFF;
@@ -35,7 +42,8 @@ button{
 
 
 .display{
-    width: 500px;
+    width: 70%;
+    max-width: 500px;
     height: 40%;
     display: flex;
     justify-content: space-around;
@@ -91,3 +99,4 @@ p{
 .info{
     width: 50%;
 }
+
