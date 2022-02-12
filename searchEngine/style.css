@@ -7,7 +7,6 @@
 
 body {
   width: 100vw;
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,9 +21,27 @@ body {
 }
 
 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   width: 70%;
   height: 70%;
   background-color: aquamarine;
+}
+
+button {
+  width: 20%;
+  margin: 0 auto;
 }
 
 .searchContainer {
@@ -42,6 +59,7 @@ main {
   margin: 0 auto;
   padding: 0.2em;
   text-align: center;
+  font-size: 1.3em;
 }
 
 .searchContainer input {
@@ -49,5 +67,9 @@ main {
   font-size: 0.8em;
   width: 50%;
   margin: 0 auto;
+}
+
+.hide {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

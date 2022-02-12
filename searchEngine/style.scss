@@ -6,7 +6,6 @@
 
 body{
     width: 100vw;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,10 +14,20 @@ body{
 }
 
 main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
     width: 70%;
     height: 70%;
     background-color: aquamarine;
 }
+
+button{
+    width: 20%;
+    margin: 0 auto;
+}
+
 
 .searchContainer{
     display: flex;
@@ -31,6 +40,7 @@ main{
         margin: 0 auto;
         padding: 0.2em;
         text-align: center;
+        font-size: 1.3em;
     }
 
     input{
@@ -40,4 +50,8 @@ main{
         margin: 0 auto;
     }
 
+}
+
+.hide{
+    display: none;
 }
