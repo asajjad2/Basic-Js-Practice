@@ -259,22 +259,94 @@ console.warn(text);
 console.error(text);
 console.log("%c hello",'color:green; font-weight:bold; background-color:red;')
 
-document.body.innerHTML = "new page!";
+// document.body.innerHTML = "new page!";
 
 console.dir(document.body);
 
 
+// can also access and edit classes using .className += " blue" etc
+// or can use .classList.add/remove/toggle etc
+// or element.setAttribute('id',"abc"), element.setAttribute("class","abc");
+// - element.removeAttribtue("","")
+
+let ul = document.querySelector('ul');
+let li = document.createElement('li');
+li.appendChild(document.createTextNode('6'));
+li.setAttribute('class','abc');
+ul.appendChild(li);
+
+//prepend vs append
+
+// const vals = [200,300,400];
+// let main = document.querySelector('.container');
+
+// vals.forEach(function(val){
+
+//   let img = document.createElement('img');
+//   img.setAttribute('src','https://via.placeholder.com/'+val+'x100/0000ff');
+//   let newDiv = document.createElement('div');
+//   newDiv.appendChild(img);
+//   console.log(newDiv);
+
+//   main.prepend(newDiv);
+//   main.appendChild(newDiv);
+// })
+
+// mousemove event
+
+// main.addEventListener('mousemove',function(e){
+//   // main.innerHTML += "X: " + e.x + " Y: " + e.y;
+// })
+
+// fun with images
+// let main = document.querySelector('.container');
+// let newDiv = document.createElement('div');
+// let num = 5;
+
+// main.prepend(newDiv);
+
+// for(let i=0 ; i<num ; i++){
+//   let img = document.createElement('img');
+//   let clr = randomColor();
+
+//   img.setAttribute('src','https://via.placeholder.com/100x100/'+clr);
+//   newDiv.prepend(img);
+
+//   img.addEventListener('click',function(){
+//     img.setAttribute('src','https://via.placeholder.com/100x100/'+randomColor());
+//   })
+  
+// }
+
+// function randomColor(){
+//   return Math.random().toString(16).substr(-6);
+// }
+
+
+// using form values input.value
+
+//annoying blinker using setInterval and clearInterval  - https://codepen.io/Asajjad2/pen/abVywqB
+
+// let Images = document.querySelectorAll('img');
+// Images.forEach(function(image){
+//   image.addEventListener('click',function(e){
+//     let clr = Math.random().toString(16).substr(-6);
+//     console.log(clr);
+//     e.target.setAttribute('src','https://via.placeholder.com/100x100/'+clr);
+//   })
+// })
+
 //4.1 - objects
 
-let user = new Object(); // "object constructor" syntax
-let user = {};  // "object literal" syntax
+// let user = new Object(); // "object constructor" syntax
+// let user = {};  // "object literal" syntax
 
-let user = {     // an object
-    name: "John",  // by key "name" store value "John"
-    age: 30        // by key "age" store value 30
-  };
+// let user = {     // an object
+//     name: "John",  // by key "name" store value "John"
+//     age: 30        // by key "age" store value 30
+//   };
 
-delete user.age;
+// delete user.age;
 
 // multiword properties
 

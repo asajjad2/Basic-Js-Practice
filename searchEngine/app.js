@@ -124,3 +124,7 @@ function hideResults(){
     
 
 }
+
+//code refactor, proper function and flow etc
+//results showing irrespective of upper lower case
+//results showing as person types
