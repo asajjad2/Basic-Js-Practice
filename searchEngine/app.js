@@ -125,6 +125,13 @@ function hideResults(){
 
 }
 
+input.addEventListener("keyup",function(event){
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        btn.click();
+    }
+})
+
 //code refactor, proper function and flow etc
 //results showing irrespective of upper lower case
 //results showing as person types
