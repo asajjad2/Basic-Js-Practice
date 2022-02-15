@@ -327,6 +327,17 @@ ul.appendChild(li);
 
 //annoying blinker using setInterval and clearInterval  - https://codepen.io/Asajjad2/pen/abVywqB
 
+// creating own json api = myjson.com 
+
+
+// XMLHttpRequest is about same as fetch and is more browser compatible, fetch is newer 
+//fetch arrow function 
+// https://api.jsonserve.com/qSy-xe
+const url = "https://www.reddit.com/r/test/top/.json?limit=5";
+fetch(url).then(res => res.json()).then(data => console.log(data));
+//random user api https://randomuser.me/api/?results=5
+//reddit post api https://www.reddit.com/r/test/top/.json?limit=5
+
 // let Images = document.querySelectorAll('img');
 // Images.forEach(function(image){
 //   image.addEventListener('click',function(e){
