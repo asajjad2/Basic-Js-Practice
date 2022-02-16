@@ -337,6 +337,12 @@ const url = "https://www.reddit.com/r/test/top/.json?limit=5";
 fetch(url).then(res => res.json()).then(data => console.log(data));
 //random user api https://randomuser.me/api/?results=5
 //reddit post api https://www.reddit.com/r/test/top/.json?limit=5
+//github https://api.github.com/search/repositories?q=tetris&sort=stars&order=desc
+//stackoverflow https://api.stackexchange.com/docs - 
+// https://api.stackexchange.com/2.2/questions?order=desc&sort=activity&tagg
+// ed=javascript&site=stackoverflow
+
+
 
 // let Images = document.querySelectorAll('img');
 // Images.forEach(function(image){
