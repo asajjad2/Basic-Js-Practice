@@ -96,7 +96,7 @@ function generateResults(searchValue){
 
     // console.log(searchValue);
 
-    searchValue.toLowerCase();
+    searchValue = searchValue.toLowerCase();
 
     hideResults();
 
@@ -107,9 +107,12 @@ function generateResults(searchValue){
     data.forEach(function(item){
 
         // console.log(item.element.classList);
+        
+        let lowerName = item.name;
 
+        lowerName = lowerName.toLowerCase();
 
-        if(item.name.includes(searchValue)){
+        if(lowerName.includes(searchValue)){
             
             item.element.classList.remove("hide");
 
@@ -126,12 +129,12 @@ function hideResults(){
 }
 
 input.addEventListener("keyup",function(event){
-    if (event.keyCode === 13) {
+    
         event.preventDefault();
         btn.click();
-    }
+    
 })
 
 //code refactor, proper function and flow etc
-//results showing irrespective of upper lower case
+
 //results showing as person types
