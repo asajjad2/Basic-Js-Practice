@@ -342,6 +342,22 @@ fetch(url).then(res => res.json()).then(data => console.log(data));
 // https://api.stackexchange.com/2.2/questions?order=desc&sort=activity&tagg
 // ed=javascript&site=stackoverflow
 
+//setting headers for apis
+
+function testingAPI(){
+    let key = "620b4b62ae275b43b6571088";
+    let url  = "https://dummyapi.io/data/v1/user?limit=10";
+    console.log(httpGet(url,key));
+}
+function httpGet(url,key){
+    let xmlHTTp = new XMLHttpRequest();
+    xmlHTTp.open("GET",url,false);
+    xmlHTTp.setRequestHeader("app-id",key);
+    xmlHTTp.send(null);
+    return xmlHTTp.responseText;
+}
+
+testingAPI();
 
 
 // let Images = document.querySelectorAll('img');
