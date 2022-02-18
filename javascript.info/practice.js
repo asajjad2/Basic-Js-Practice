@@ -1,3 +1,4 @@
+"use strict"
 // // 2.6
 
 // const name = prompt("Please input your name:",'');
@@ -386,3 +387,106 @@ testingAPI();
 // "likes birds": true
 
 // user["likes birds"] = true;
+
+// 4.2 - object refrences 
+let user = {
+    name: "John",
+    age: 30
+};
+let clone = {};
+
+for (let key in user) {
+    console.log(key,user[key]);
+    clone[key] = user[key];
+}
+
+clone.name = "Pete";
+alert( user.name );
+
+
+
+let permissions1 = {canView : true};
+let permissions2 = {canEdit : true};
+
+Object.assign(user, permissions1, permissions2);
+
+console.log(user);
+
+clone = Object.assign({}, user);
+
+console.log(clone);
+
+
+// Const objects can be modified
+//deep cloning for nested objects
+
+//4.3
+//garbage collection, mark-and-sweep algorithm and memory management in JS
+
+//4.4
+// Object methods, "this" 
+
+
+    // function Calculator(){
+
+    //     this.read = function(){
+    //         this.value1 = +prompt("Input value 1","");
+    //         this.value2 = Number(prompt("Input value 2",""));
+    //     };
+
+    //     this.sum = function(){
+    //         return this.value1 + this.value2;
+    //     };
+
+    //     this.mul = function(){
+    //         return this.value1 * this.value2;
+    //     };
+
+    // }
+
+
+    function Accumulator(startingValue){
+
+        this.value = startingValue;
+
+        this.read = function(){
+            this.value += +prompt("Input value to be added",0);
+        }
+
+    }
+
+    let accumulator = new Accumulator(1); // initial value 1
+
+    accumulator.read(); // adds the user-entered value
+    accumulator.read(); // adds the user-entered value
+
+    alert(accumulator.value); // shows the sum of these values
+
+
+
+
+  
+//   let calc = new Calculator();
+//   calc.read();
+//   alert( calc.sum() );
+//   alert( calc.mul() );
+
+// chaining function calls
+// let ladder = {
+//     step: 0,
+//     up() {
+//       this.step++;
+//       return this;
+//     },
+//     down() {
+//       this.step--;
+//       return this;
+//     },
+//     showStep: function() { // shows the current step
+//       alert( this.step );
+//       return this;
+//     }
+// };
+
+
+// ladder.up().up().down().showStep().down().showStep(); 
